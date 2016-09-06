@@ -24,7 +24,7 @@
 
   <div class="container">
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
+    <ul id="my-tabs" class="nav nav-tabs" role="tablist">
       <li role="presentation" class="active"><a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">Basic</a></li>
       <li role="presentation"><a href="#javascript" aria-controls="javascript" role="tab" data-toggle="tab">JavaScript</a></li>
     </ul>
@@ -32,23 +32,27 @@
     <!-- Tab panes -->
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="basic">
-        {% highlight ruby %}
-        def show
-          @widget = Widget(params[:id])
-          respond_to do |format|
-            format.html # show.html.erb
-            format.json { render json: @widget }
-          end
-        end
-        {% endhighlight %}
+        <code>
+          print "hello world!"
+        </code>
       </div>
-      <div role="tabpanel" class="tab-pane" id="profile">...</div>
+      <div role="tabpanel" class="tab-pane" id="javascript">
+        <code>
+          print "goodbye, cruel world!"
+        </code>
+      </div>
     </div>
   </div>
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+    $('#my-tabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+  </script>
 
 </body>
 </html>
