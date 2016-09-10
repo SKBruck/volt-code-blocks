@@ -41,27 +41,47 @@
 
     <!-- Nav tabs -->
     <ul id="my-tabs" class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">Basic</a></li>
-      <li role="presentation"><a href="#javascript" aria-controls="javascript" role="tab" data-toggle="tab">JavaScript</a></li>
+      <li role="presentation" class="active"><a href="#javascript" aria-controls="javascript" role="tab" data-toggle="tab">Javascript</a></li>
+      <li role="presentation"><a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">Basic</a></li>
     </ul>
 
     <!-- Tab panes -->
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="basic">
-        <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+      <div role="tabpanel" class="tab-pane active" id="javascript">
+        <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Hamburger1</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"object"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">s</span> <span class="o">===</span> <span class="s2">"Sign Out"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">Hamburger1</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="nx">butSignIn</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">s</span> <span class="o">===</span> <span class="s2">"Change Password"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// todo</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">s</span> <span class="o">===</span> <span class="s2">"Change Email"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// todo</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">s</span> <span class="o">===</span> <span class="s2">"Delete Account"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// todo</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
       </div>
-      <div role="tabpanel" class="tab-pane" id="javascript">
-        <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">show</span>
-  <span class="vi">@widget</span> <span class="o">=</span> <span class="no">Widget</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
-  <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
-    <span class="nb">format</span><span class="p">.</span><span class="nf">html</span> <span class="c1"># show.html.erb</span>
-    <span class="nb">format</span><span class="p">.</span><span class="nf">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json: </span><span class="vi">@widget</span> <span class="p">}</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></figure>
+      <div role="tabpanel" class="tab-pane" id="basic">
+        <figure class="highlight"><pre><code class="language-visualbasic" data-lang="visualbasic"><span class="k">Function</span> <span class="nf">Hamburger1_onclick</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">If</span> <span class="n">typeof</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="s">"object"</span> <span class="k">Then</span> <span class="k">Return</span>
+
+    <span class="k">If</span> <span class="n">s</span> <span class="o">=</span><span class="s">"Sign Out"</span> <span class="k">Then</span>
+        <span class="n">Hamburger1</span><span class="p">.</span><span class="n">hide</span><span class="p">()</span><span class="err">;</span>
+        <span class="n">butSignIn</span><span class="p">.</span><span class="n">show</span><span class="p">()</span><span class="err">;</span>
+    <span class="k">ElseIf</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"Change Password"</span> <span class="k">Then</span>
+        <span class="c1">' todo</span>
+    <span class="k">ElseIf</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"Change Email"</span> <span class="k">Then</span>
+        <span class="c1">' todo</span>
+    <span class="k">ElseIf</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"Delete Account"</span> <span class="k">Then</span>
+        <span class="c1">' todo</span>
+    <span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">Function</span></code></pre></figure>
       </div>
     </div>
 
